@@ -1,0 +1,21 @@
+{
+  "name": "@ilogia/auth",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@ilogia/types": "*",
+    "@ilogia/utilities": "*",
+    "@ilogia/configuration": "*"
+  },
+  "peerDependencies": {
+    "@supabase/supabase-js": "^2",
+    "react": "^18",
+    "react-router-dom": "^6"
+  },
+  "scripts": {
+    "test": "vitest run"
+  }
+}

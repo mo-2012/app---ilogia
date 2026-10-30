@@ -1,0 +1,17 @@
+{
+  "name": "@ilogia/app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ilogia/auth": "*", "@ilogia/configuration": "*", "@ilogia/design-system": "*", "@ilogia/types": "*", "@ilogia/ui": "*", "@ilogia/utilities": "*",
+    "@supabase/supabase-js": "^2", "lucide-react": "*", "react": "^18.3.1", "react-dom": "^18.3.1", "react-router-dom": "^6.28.0", "zod": "^3"
+  }
+}
