@@ -24,7 +24,8 @@ jobs:
           VITE_COOKIE_DOMAIN: ${{ vars.VITE_COOKIE_DOMAIN }}
           VITE_API_BASE: ${{ vars.VITE_API_BASE }}
       - name: Guard against leaked secrets in the bundle
-        run: "! grep -rEl 'service_role|sb_secret_' apps/app---ilogia/dist"
+        # Matches real key material only (sb_secret_… keys or JWTs whose payload holds role=service_role).
+        run: "! grep -rEl 'sb_secret_[A-Za-z0-9_-]{20,}|c2VydmljZV9yb2xl|InNlcnZpY2Vfcm9sZS' apps/app---ilogia/dist"
       - uses: actions/upload-pages-artifact@v3
         with: { path: apps/app---ilogia/dist }
   deploy:
