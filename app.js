@@ -20,6 +20,7 @@
   };
   const STORAGE = 'ilogia-eco-session';
   const DEMO_KEY = 'ilogia-dashboard-demo';
+  const APP_AUTH_REDIRECT = 'https://app.ilogia-eg.com';
   const app = document.getElementById('app');
   const localeKey = 'ilg.locale';
   const translations = {
@@ -777,9 +778,12 @@
   }
   async function signInWithGoogle() {
     if (!supabaseClient) throw new Error(supabaseErrors[locale].notReady);
+    const redirectTo = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+      ? location.origin + location.pathname
+      : APP_AUTH_REDIRECT;
     const { error } = await supabaseClient.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: location.origin + location.pathname }
+      options: { redirectTo }
     });
     if (error) throw error;
   }
