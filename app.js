@@ -26,7 +26,7 @@
     ar: {
       home: 'الرئيسية', services: 'الخدمات', notifications: 'التنبيهات', profile: 'ملفي', settings: 'الإعدادات',
       greetingMorning: 'صباح الخير', greetingEvening: 'مساء الخير', student: 'يا صديقي', demo: 'وضع العرض التجريبي — كل الأرقام هنا للتوضيح وليست بيانات طالب حقيقي.', exitDemo: 'الخروج من العرض',
-      signIn: 'تسجيل الدخول', loginTitle: 'أهلًا بعودتك', loginSub: 'سجّل الدخول بحساب iLogia نفسه الذي تستخدمه في الموقع الرئيسي.', register: 'إنشاء حساب', registerTitle: 'حساب جديد', registerSub: 'حساب واحد لكل خدمات iLogia.', forgot: 'نسيت كلمة المرور؟', forgotTitle: 'استعادة كلمة المرور', forgotSub: 'اكتب بريدك وسنرسل لك رابطًا لتعيين كلمة مرور جديدة.', resetTitle: 'تعيين كلمة مرور جديدة', email: 'البريد الإلكتروني', password: 'كلمة المرور', newPassword: 'كلمة المرور الجديدة', confirm: 'تأكيد كلمة المرور', fullName: 'الاسم الكامل', submitLogin: 'دخول', createAccount: 'إنشاء الحساب', continueGoogle: 'المتابعة باستخدام Google', or: 'أو', sendLink: 'إرسال الرابط', updatePassword: 'حفظ كلمة المرور', demoEnter: 'استعراض تجريبي بدون حساب', noAccount: 'ليس لديك حساب؟', hasAccount: 'لديك حساب بالفعل؟', backLogin: 'العودة لتسجيل الدخول', checkEmail: 'تحقق من بريدك', emailSent: 'إذا كان البريد مسجلًا فستصلك رسالة خلال دقائق.', registered: 'أرسلنا رابط تأكيد إلى بريدك. افتح الرابط ثم سجّل الدخول.', configMissing: 'خدمة تسجيل الدخول غير متاحة حاليًا. يمكنك استعراض اللوحة بالبيانات التجريبية.',
+      signIn: 'تسجيل الدخول', loginTitle: 'أهلًا بعودتك', loginSub: 'سجّل الدخول إلى حساب لوحة الطالب.', register: 'إنشاء حساب', registerTitle: 'حساب جديد', registerSub: 'أنشئ حسابًا للوحة الطالب.', forgot: 'نسيت كلمة المرور؟', forgotTitle: 'استعادة كلمة المرور', forgotSub: 'اكتب بريدك وسنرسل لك رابطًا لتعيين كلمة مرور جديدة.', resetTitle: 'تعيين كلمة مرور جديدة', email: 'البريد الإلكتروني', password: 'كلمة المرور', newPassword: 'كلمة المرور الجديدة', confirm: 'تأكيد كلمة المرور', fullName: 'الاسم الكامل', submitLogin: 'دخول', createAccount: 'إنشاء الحساب', continueGoogle: 'المتابعة باستخدام Google', or: 'أو', sendLink: 'إرسال الرابط', updatePassword: 'حفظ كلمة المرور', demoEnter: 'استعراض تجريبي بدون حساب', noAccount: 'ليس لديك حساب؟', hasAccount: 'لديك حساب بالفعل؟', backLogin: 'العودة لتسجيل الدخول', checkEmail: 'تحقق من بريدك', emailSent: 'إذا كان البريد مسجلًا فستصلك رسالة خلال دقائق.', registered: 'أرسلنا رابط تأكيد إلى بريدك. افتح الرابط ثم سجّل الدخول.', configMissing: 'خدمة تسجيل الدخول غير متاحة حاليًا. يمكنك استعراض اللوحة بالبيانات التجريبية.',
       goal: 'هدف اليوم', editGoal: 'تعديل الهدف', minutes: 'دقيقة', goalDone: 'حققت هدف اليوم', studyHours: 'ساعات المذاكرة', lessons: 'دروس مكتملة', activeDays: 'أيام نشاط', streak: 'أيام متتالية', of: 'من', studyMap: 'خريطة المذاكرة — آخر ١٢ أسبوعًا', less: 'أقل', more: 'أكثر', weekTotal: 'إجمالي المذاكرة', weekDays: 'أيام ذاكرت فيها', bestDay: 'أطول يوم', avgDay: 'متوسط يوم المذاكرة', curriculum: 'التقدّم في المنهج', curriculumSub: 'أكملت {p}٪ من دروس المنصة', recent: 'آخر الدروس المكتملة', recentEmpty: 'لم تُكمل أي درس بعد', recentEmptySub: 'ابدأ أول درس من الموقع الرئيسي وسيظهر هنا.', openLessons: 'افتح الدروس', ecosystem: 'منظومة iLogia', ecosystemSub: 'كل خدمة تطبيق مستقل بحسابك نفسه.', allServices: 'كل الخدمات', notices: 'تنبيهات', allNotices: 'عرض الكل', subscription: 'الاشتراك', noSubscription: 'بدون اشتراك', activeSubscription: 'اشتراك فعّال', pendingSubscription: 'اشتراك قيد المراجعة', rejectedSubscription: 'اشتراك مرفوض', expiredSubscription: 'اشتراك منتهٍ', daysLeft: 'متبقٍ {n} يوم', planDetails: 'تفاصيل خطتك وحالة اشتراكك.', servicesSub: 'استكشف الأدوات والخدمات المتاحة لك.',
       live: 'متاح', building: 'قيد التطوير', planned: 'قريبًا', open: 'فتح', all: 'الكل', search: 'ابحث عن خدمة', noServices: 'لا توجد خدمة مطابقة', servicesIntro: 'خدمات منظومة iLogia — أدواتك التعليمية في مكان واحد.', unread: 'غير مقروء', markAll: 'تحديد الكل كمقروء', markOne: 'تحديد كمقروء', noNotices: 'لا توجد إشعارات', noticesSub: 'سنخبرك هنا بحالة اشتراكك وتقدّمك.', allTab: 'الكل',
       setupNotice: 'أكمل إعداد حسابك', setupBody: 'اختر صفّك الدراسي حتى نعرض لك المحتوى المناسب.', pendingNotice: 'طلب اشتراكك قيد المراجعة', pendingBody: 'ستُفعّل الدروس المدفوعة فور موافقة الإدارة على الإيصال.', activeNotice: 'اشتراكك فعّال', activeBody: 'باقة {plan} — متبقٍ {n} يوم.', expiringNotice: 'اشتراكك ينتهي قريبًا', expiringBody: 'متبقٍ {n} يوم على انتهاء باقة {plan}.', rejectedNotice: 'تم رفض إيصال الاشتراك', rejectedBody: 'راجع بيانات الدفع وأعد رفع الإيصال من الموقع الرئيسي.', goalNotice: 'أحسنت، حققت هدف اليوم', goalBody: 'ذاكرت {m} دقيقة اليوم.', streakNotice: 'سلسلة {n} أيام متتالية', streakBody: 'استمر يوميًا حتى لا تنقطع السلسلة.',
@@ -37,7 +37,7 @@
     en: {
       home: 'Home', services: 'Services', notifications: 'Alerts', profile: 'Profile', settings: 'Settings',
       greetingMorning: 'Good morning', greetingEvening: 'Good evening', student: 'friend', demo: 'Demo mode — every number is sample data, not a real student’s data.', exitDemo: 'Exit demo',
-      signIn: 'Sign in', loginTitle: 'Welcome back', loginSub: 'Use the same iLogia account you use on the main website.', register: 'Create account', registerTitle: 'New account', registerSub: 'One account for every iLogia service.', forgot: 'Forgot password?', forgotTitle: 'Reset password', forgotSub: 'Enter your email and we’ll send a reset link.', resetTitle: 'Choose a new password', email: 'Email', password: 'Password', newPassword: 'New password', confirm: 'Confirm password', fullName: 'Full name', submitLogin: 'Sign in', createAccount: 'Create account', continueGoogle: 'Continue with Google', or: 'or', sendLink: 'Send link', updatePassword: 'Save password', demoEnter: 'Explore the demo without an account', noAccount: 'No account yet?', hasAccount: 'Already have an account?', backLogin: 'Back to sign in', checkEmail: 'Check your email', emailSent: 'If the email is registered, a message will arrive in a few minutes.', registered: 'We sent a confirmation link. Open it, then sign in.', configMissing: 'Sign-in is unavailable right now. You can explore the sample dashboard.',
+      signIn: 'Sign in', loginTitle: 'Welcome back', loginSub: 'Sign in to your student dashboard account.', register: 'Create account', registerTitle: 'New account', registerSub: 'Create an account for the student dashboard.', forgot: 'Forgot password?', forgotTitle: 'Reset password', forgotSub: 'Enter your email and we’ll send a reset link.', resetTitle: 'Choose a new password', email: 'Email', password: 'Password', newPassword: 'New password', confirm: 'Confirm password', fullName: 'Full name', submitLogin: 'Sign in', createAccount: 'Create account', continueGoogle: 'Continue with Google', or: 'or', sendLink: 'Send link', updatePassword: 'Save password', demoEnter: 'Explore the demo without an account', noAccount: 'No account yet?', hasAccount: 'Already have an account?', backLogin: 'Back to sign in', checkEmail: 'Check your email', emailSent: 'If the email is registered, a message will arrive in a few minutes.', registered: 'We sent a confirmation link. Open it, then sign in.', configMissing: 'Sign-in is unavailable right now. You can explore the sample dashboard.',
       goal: 'Today’s goal', editGoal: 'Edit goal', minutes: 'min', goalDone: 'Goal reached today', studyHours: 'Study hours', lessons: 'Lessons completed', activeDays: 'Active days', streak: 'Day streak', of: 'of', studyMap: 'Study map — last 12 weeks', less: 'Less', more: 'More', weekTotal: 'Total study', weekDays: 'Days studied', bestDay: 'Longest day', avgDay: 'Average study day', curriculum: 'Curriculum progress', curriculumSub: 'You completed {p}% of platform lessons', recent: 'Recently completed lessons', recentEmpty: 'No lessons completed yet', recentEmptySub: 'Start a lesson on the main site and it will appear here.', openLessons: 'Open lessons', ecosystem: 'The iLogia ecosystem', ecosystemSub: 'Each service is its own app, using the same account.', allServices: 'All services', notices: 'Notices', allNotices: 'See all', subscription: 'Subscription', noSubscription: 'No subscription', activeSubscription: 'Active subscription', pendingSubscription: 'Subscription under review', rejectedSubscription: 'Subscription rejected', expiredSubscription: 'Subscription expired', daysLeft: '{n} days left', planDetails: 'Your plan details and subscription status.', servicesSub: 'Explore the tools and services available to you.',
       live: 'Live', building: 'In progress', planned: 'Coming soon', open: 'Open', all: 'All', search: 'Search services', noServices: 'No matching service', servicesIntro: 'iLogia ecosystem services — your learning tools in one place.', unread: 'Unread', markAll: 'Mark all as read', markOne: 'Mark as read', noNotices: 'No notifications', noticesSub: 'Subscription and progress updates will appear here.', allTab: 'All',
       setupNotice: 'Finish setting up your account', setupBody: 'Choose your grade so we can show the right content.', pendingNotice: 'Your subscription is under review', pendingBody: 'Paid lessons unlock once an admin approves your receipt.', activeNotice: 'Your subscription is active', activeBody: '{plan} plan — {n} days left.', expiringNotice: 'Your subscription ends soon', expiringBody: '{n} days left on the {plan} plan.', rejectedNotice: 'Your receipt was rejected', rejectedBody: 'Check the payment details and re-upload the receipt on the main site.', goalNotice: 'Great — daily goal reached', goalBody: 'You studied {m} minutes today.', streakNotice: '{n}-day streak', streakBody: 'Study every day to keep it going.',
@@ -199,12 +199,12 @@
     if (action === 'dashboard') {
       const { user } = unwrap(await supabaseClient.auth.getUser(token));
       if (!user || !user.id) throw new Error(t('loginError'));
+      const profile = await loadOrCreateProfile(user);
       const requests = {
         progress: supabaseClient.rpc('my_progress'),
         subscription: supabaseClient.from('my_subscription').select('*').limit(1),
         videos: supabaseClient.from('videos').select('id,title,unit,subject:subjects(name)').order('id', { ascending: true }),
         grades: supabaseClient.from('grades').select('*').order('sort_order', { ascending: true }),
-        profile: supabaseClient.from('profiles').select('*').eq('id', user.id).limit(1),
         admin: supabaseClient.rpc('is_admin')
       };
       const entries = await Promise.all(Object.entries(requests).map(async ([name, request]) => {
@@ -222,14 +222,9 @@
         error.message = error.message || 'Could not load student progress.';
         throw error;
       }
-      const profile = Array.isArray(data.profile) ? data.profile[0] : null;
       return {
         user,
-        profile: profile || {
-          id: user.id,
-          email: user.email,
-          full_name: user.user_metadata && (user.user_metadata.full_name || user.user_metadata.name)
-        },
+        profile,
         is_admin: Boolean(data.admin),
         progress: data.progress || { secs: 0, done: [], days: [], by: {} },
         subscription: Array.isArray(data.subscription) ? (data.subscription[0] || null) : null,
@@ -240,6 +235,37 @@
       };
     }
     throw new Error('Unsupported Supabase action: ' + action);
+  }
+  async function loadOrCreateProfile(user) {
+    const { data: existingProfile, error: readError } = await supabaseClient
+      .from('profiles')
+      .select('*')
+      .eq('id', user.id)
+      .maybeSingle();
+    if (readError) throw readError;
+    if (existingProfile) return existingProfile;
+
+    const metadata = user.user_metadata || {};
+    const profileData = {
+      id: user.id,
+      email: user.email || '',
+      full_name: metadata.full_name || metadata.name || (user.email ? user.email.split('@')[0] : '')
+    };
+    const { data: createdProfile, error: createError } = await supabaseClient
+      .from('profiles')
+      .insert(profileData)
+      .select('*')
+      .single();
+    if (!createError) return createdProfile;
+
+    const { data: profileAfterInsert, error: retryReadError } = await supabaseClient
+      .from('profiles')
+      .select('*')
+      .eq('id', user.id)
+      .maybeSingle();
+    if (retryReadError) throw retryReadError;
+    if (profileAfterInsert) return profileAfterInsert;
+    throw createError;
   }
   async function refreshSession() {
     if (!session || !session.refresh_token) return false;
