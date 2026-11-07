@@ -5,7 +5,7 @@
   const supabaseSdk = window.supabase;
   const supabaseClient = supabaseSdk && config.supabaseUrl && config.supabasePublishableKey
     ? supabaseSdk.createClient(config.supabaseUrl, config.supabasePublishableKey, {
-      auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false }
+      auth: { persistSession: true, autoRefreshToken: false, detectSessionInUrl: false, flowType: 'pkce' }
     })
     : null;
   const supabaseErrors = {
@@ -611,6 +611,7 @@
       (isReset || isForgot ? '' : '<div class="auth-tabs"><a href="#/login" class="' + (!isRegister ? 'selected' : '') + '">' + esc(t('signIn')) + '</a><a href="#/register" class="' + (isRegister ? 'selected' : '') + '">' + esc(t('register')) + '</a></div>') +
       '<h1>' + esc(title) + '</h1><p class="auth-subtitle">' + esc(subtitle) + '</p>' +
       (!configured && !demo ? '<div class="auth-note">' + esc(t('configMissing')) + '</div>' : '') +
+      (window.authError ? '<div class="auth-note" role="alert">' + esc(window.authError) + '</div>' : '') +
       (isRegister && window.registered ? '<div class="success-note">' + esc(t('registered')) + '</div>' : '') +
       (isForgot && window.forgotSent ? '<div class="success-note">' + esc(t('emailSent')) + '</div>' : '') +
       form + googleOption + demoOption + '<p class="auth-footer">' + (isForgot || isReset ? '<a href="#/login">' + esc(t('backLogin')) + '</a>' : isRegister ? esc(t('hasAccount')) + ' <a href="#/login">' + esc(t('signIn')) + '</a>' : esc(t('noAccount')) + ' <a href="#/register">' + esc(t('register')) + '</a>') + '</p></section>' +
@@ -852,8 +853,33 @@
       window.authError = params.get('error_description');
     }
   }
+  async function restoreOAuthSession() {
+    const params = new URLSearchParams(location.search);
+    const code = params.get('code');
+    if (!code) return;
+    try {
+      if (!supabaseClient) throw new Error(supabaseErrors[locale].notReady);
+      const { data, error } = await supabaseClient.auth.exchangeCodeForSession(code);
+      if (error) throw error;
+      if (!data.session) throw new Error(t('loginError'));
+      saveSession(data.session);
+      window.authError = '';
+      history.replaceState(null, '', location.pathname + '#/dashboard');
+    } catch (error) {
+      window.authError = error.message || t('loginError');
+      history.replaceState(null, '', location.pathname + '#/login');
+    }
+  }
+  async function initializeApp() {
+    await restoreOAuthSession();
+    if (location.hash && !location.hash.slice(1).startsWith('/')) restoreRecoverySession();
+    if (!location.hash) location.hash = session || demo ? '#/dashboard' : '#/home';
+    await render();
+  }
   window.addEventListener('hashchange', () => { restoreRecoverySession(); render(); });
-  if (location.hash && !location.hash.slice(1).startsWith('/')) restoreRecoverySession();
-  if (!location.hash) location.hash = session || demo ? '#/dashboard' : '#/home';
-  render();
+  initializeApp().catch((error) => {
+    window.authError = error.message || t('errorGeneric');
+    saveSession(null);
+    navigate('login', true);
+  });
 }());
