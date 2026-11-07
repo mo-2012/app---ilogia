@@ -207,6 +207,9 @@ a.service-row:hover{background:#faf9f5}
 .forgot-link{justify-self:end;color:var(--brand);font-size:12px;text-decoration:underline}
 .auth-divider{display:flex;align-items:center;gap:12px;margin:17px 0;color:#98a19d;font-size:11px}
 .auth-divider:before,.auth-divider:after{height:1px;flex:1;background:var(--line);content:""}
+.google-button{position:relative;gap:10px}
+.google-mark{display:grid;width:20px;height:20px;place-items:center;border:1px solid #e6e2d9;border-radius:50%;background:#fff;color:#4285f4;font-family:Arial,sans-serif;font-size:13px;font-weight:700}
+.google-button:disabled{opacity:.65;cursor:wait}
 .auth-footer{margin:24px 0 0;text-align:center;color:#7f8984;font-size:12px}
 .auth-footer a{color:var(--brand);font-weight:700;text-decoration:underline}
 .auth-art{display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:clamp(30px,5vw,58px);background:linear-gradient(145deg,#f3f0e7,#fbfaf7)}
