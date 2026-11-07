@@ -1,36 +1,25 @@
-# iLogia — لوحة الطالب (app.ilogia-eg.com)
+# iLogia Student Dashboard
 
-The central entry point of the iLogia ecosystem. Arabic-first (RTL) with full English/LTR support.
+A static Arabic-first dashboard built with HTML, CSS, and JavaScript. It has no npm, build step, PHP server, or custom backend: authentication and data access use the existing Supabase project directly through the Supabase JavaScript SDK.
 
-| | |
-|---|---|
-| Domain | `app.ilogia-eg.com` |
-| Repository | `mo-2012/app---ilogia` |
-| Hosting | GitHub Pages (static) |
-| Data | Existing Supabase project (read via RLS with the public publishable key) |
-| Status | Built and tested locally; **not yet pushed or published** |
+## Run locally
 
-## Features
-- Sign in / register / password reset with the **same Supabase accounts** as ilogia-eg.com (no duplicate accounts; duplicate emails are rejected).
-- Protected routes, expired-session handling, logout, open-redirect-safe `?next=`.
-- Dashboard: greeting (Cairo time), today's study goal, learning ledger (hours, lessons, active days, streak), 12-week study map (Saturday-start weeks), curriculum progress, recently completed lessons, notices, ecosystem index.
-- Notifications derived from real account state (subscription status/expiry, onboarding, goal, streak) with read/unread.
-- Profile view/edit via the existing `save_my_profile` RPC (name + grade).
-- Settings: language (ar/en), digit style, daily goal, sign out.
-- Clearly-labelled **demo mode** (sample data, banner on every page) when you don't want to sign in.
-- Loading skeletons, empty and error states (with retry) on every data view.
+On Windows, double-click `apps\app---ilogia\run-local.bat`. Alternatively, from the repository root run:
 
-## Data sources (existing, unchanged)
-`rpc my_progress`, `my_subscription` (view), `videos`, `grades`, `profiles`, `rpc is_admin`, `rpc save_my_profile`.
-
-## Develop
-```bash
-cp .env.example .env.local   # fill the PUBLIC publishable key
-npm install                  # at repo root
-npm run dev -w @ilogia/app
-npm test -w @ilogia/app
-npm run build -w @ilogia/app # → apps/app---ilogia/dist
+```sh
+python -m http.server 8000 --directory apps/app---ilogia/public
 ```
 
-## Deploy
-See `docs/DEPLOYMENT_GUIDE.md`. The build is static (`dist/`), uses hash routing (works on GitHub Pages without 404 rewrites) and ships `CNAME`, `.nojekyll`, `robots.txt`.
+Open `http://localhost:8000`. The demo can be explored without an account. Sign-in requires the configured Supabase project and a valid account.
+
+## Supabase setup
+
+- `apps/app---ilogia/public/config.js` contains the Supabase project URL and **public publishable key**. This key is designed to be included in browser code. Never put a `service_role` or secret key in this file.
+- In Supabase **Authentication → URL Configuration**, add the deployed website URL (for example `https://app.ilogia-eg.com/`) and the local URL (`http://localhost:8000/`) to the allowed redirect URLs. This is needed for sign-up confirmation and password recovery.
+- Keep row-level security enabled on student data. The browser sends the signed-in student's access token directly to Supabase; authorization must be enforced by Supabase RLS and the existing RPCs.
+- The dashboard uses `my_progress`, `my_subscription`, `videos`, `grades`, `profiles`, `is_admin`, and `save_my_profile`. These database objects and their grants/RLS policies must already exist.
+- The page CSP permits the pinned Supabase CDN, only the inline-script hash reported by the browser, and Google Fonts hosts. It does not enable `unsafe-inline` for scripts.
+
+## Deploy to GitHub Pages
+
+The GitHub Actions workflow publishes only `apps/app---ilogia/public/`. Enable GitHub Pages with GitHub Actions as the source, then push to `main` or run the workflow manually. GitHub Pages serves the static frontend; no API hosting or PHP configuration is needed.
